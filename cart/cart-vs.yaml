@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: cart-vs
+spec:
+  gateways:
+    - cart-gateway
+  hosts:
+    - 'cart.192.168.49.10.nip.io'
+  http:
+  - match:
+    - uri:
+        prefix: /
+    name: general
+    route:
+    - destination:
+        host: cart-svc
+        port:
+          number: 5000

@@ -1,0 +1,19 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: store-vs
+spec:
+  gateways:
+    - store-gateway
+  hosts:
+    - 'store.192.168.49.10.nip.io'
+  http:
+  - match:
+    - uri:
+        prefix: /
+    name: general
+    route:
+    - destination:
+        host: store-svc
+        port:
+          number: 5000

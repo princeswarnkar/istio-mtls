@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cart-svc
+  labels:
+    app: cart
+    service: cart-svc
+spec:
+  ports:
+  - port: 5000
+    name: http
+  selector:
+    app: cart

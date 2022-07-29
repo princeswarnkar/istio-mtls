@@ -1,0 +1,13 @@
+version: '3.0'
+services:
+  store:
+    image: 69323/store
+    container_name: store
+    ports:
+      - "5001:5000"
+
+  cart:
+    image: 69323/cart
+    container_name: cart
+    ports:
+      - "5000:5000"
