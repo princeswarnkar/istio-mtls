@@ -1,7 +1,17 @@
+
+
+
+
+
 # Istio-mTLS 
 2 Deployments with mTLS and monitoring feature.
 
 We shall require a running kubernetes cluster ( Here we are using minikube cluster)
+
+## Proposed Architecture >>
+
+![Alt text](./Istio.jpg?raw=true "Architecture")
+
 
 ## Installing Minikube in local system >>
 
